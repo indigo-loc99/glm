@@ -8,7 +8,9 @@
 #include "type_vec3.hpp"
 #include "type_vec4.hpp"
 #include "_vectorize.hpp"
+#ifndef GLM_CXX_MODULES
 #include <limits>
+#endif
 
 namespace glm
 {

@@ -4,10 +4,18 @@
 #pragma once
 
 #include "type_vec2.hpp"
-#include <limits>
-#include <cstddef>
+#ifndef GLM_CXX_MODULES
+#	include <limits>
+#	include <cstddef>
+#	ifndef GLM_CXX_MODULES
+#		define GLM_CXX_MODULES
+#	endif
 
-namespace glm
+#else
+#	include <stddef.h>
+#endif
+
+GLM_CXX_MODULES_EXPORT namespace glm
 {
 	template<typename T, qualifier Q>
 	struct mat<2, 2, T, Q>

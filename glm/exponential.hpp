@@ -18,9 +18,14 @@
 #include "detail/type_vec2.hpp"
 #include "detail/type_vec3.hpp"
 #include "detail/type_vec4.hpp"
-#include <cmath>
+#ifndef GLM_CXX_MODULES
+#	include <cmath>
+#	ifndef GLM_CXX_MODULES_EXPORT
+#		define GLM_CXX_MODULES_EXPORT
+#	endif
+#endif
 
-namespace glm
+GLM_CXX_MODULES_EXPORT namespace glm
 {
 	/// @addtogroup core_func_exponential
 	/// @{

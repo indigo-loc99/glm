@@ -88,6 +88,9 @@ namespace detail
 		typedef mat<4, 4, T, Q> type;
 	};
 }//namespace detail
+}//namespace glm
+
+GLM_CXX_MODULES_EXPORT namespace glm {
 
 	 /// @addtogroup core_func_matrix
 	 /// @{

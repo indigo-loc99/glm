@@ -18,6 +18,10 @@
 #	pragma message("GLM: GLM_EXT_scalar_uint_sized extension included")
 #endif
 
+#ifndef GLM_CXX_MODULES
+#define GLM_CXX_MODULES_EXPORT
+#endif
+
 namespace glm{
 namespace detail
 {

@@ -2,7 +2,9 @@
 
 //#include "compute_common.hpp"
 #include "setup.hpp"
+#ifndef GLM_CXX_MODULES
 #include <limits>
+#endif
 
 namespace glm{
 namespace detail

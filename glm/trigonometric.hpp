@@ -21,7 +21,11 @@
 #include "detail/setup.hpp"
 #include "detail/qualifier.hpp"
 
-namespace glm
+#if !defined(GLM_CXX_MODULES) && !defined(GLM_CXX_MODULES_EXPORT)
+#define GLM_CXX_MODULES_EXPORT
+#endif
+
+GLM_CXX_MODULES_EXPORT namespace glm
 {
 	/// @addtogroup core_func_trigonometric
 	/// @{

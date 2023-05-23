@@ -1,7 +1,15 @@
 #ifndef GLM_SETUP_INCLUDED
 
+#ifndef GLM_CXX_MODULES
 #include <cassert>
 #include <cstddef>
+#else
+#pragma warning(push)
+#pragma warning(disable : 5244)
+#include <assert.h>
+#include <stddef.h>
+#pragma warning(pop)
+#endif
 
 #define GLM_VERSION_MAJOR 0
 #define GLM_VERSION_MINOR 9
@@ -692,7 +700,14 @@ namespace detail
 // 64-bit int
 
 #if GLM_HAS_EXTENDED_INTEGER_TYPE
+#ifndef GLM_CXX_MODULES
 #	include <cstdint>
+#else
+#pragma warning(push)
+#pragma warning(disable : 5244)
+#   include <stdint.h>
+#pragma warning(pop)
+#endif
 #endif
 
 namespace glm{
@@ -726,6 +741,7 @@ namespace detail
 // make_unsigned
 
 #if GLM_HAS_MAKE_SIGNED
+#if 0
 #	include <type_traits>
 
 namespace glm{
@@ -734,6 +750,7 @@ namespace detail
 	using std::make_unsigned;
 }//namespace detail
 }//namespace glm
+#endif
 
 #else
 

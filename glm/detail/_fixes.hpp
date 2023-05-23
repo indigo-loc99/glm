@@ -1,3 +1,4 @@
+#ifndef GLM_CXX_MODULES
 #include <cmath>
 
 //! Workaround for compatibility with other libraries
@@ -25,3 +26,4 @@
 #undef log2
 #endif
 
+#endif // !GLM_CXX_MODULES

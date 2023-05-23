@@ -1,10 +1,14 @@
 /// @ref core
 /// @file glm/ext/vector_float4.hpp
 
+#if !defined(GLM_CXX_MODULES) && !defined(GLM_CXX_MODULES_EXPORT)
+#define GLM_CXX_MODULES_EXPORT
+#endif
+
 #pragma once
 #include "../detail/type_vec4.hpp"
 
-namespace glm
+GLM_CXX_MODULES_EXPORT namespace glm
 {
 	/// @addtogroup core_vector
 	/// @{

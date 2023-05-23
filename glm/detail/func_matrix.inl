@@ -1,5 +1,7 @@
 #include "../geometric.hpp"
+#ifndef GLM_CXX_MODULES
 #include <limits>
+#endif
 
 namespace glm{
 namespace detail

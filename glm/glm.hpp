@@ -101,18 +101,27 @@
 /// included  a specific file.
 ///
 
+#ifndef GLM_CXX_MODULES
 #include "detail/_fixes.hpp"
 
 #include "detail/setup.hpp"
+#else
+#include "detail/setup.hpp"
+#include "detail/setup_module_purview.hpp"
+#endif
 
 #pragma once
 
-#include <cmath>
-#include <climits>
-#include <cfloat>
-#include <limits>
-#include <cassert>
-#include "fwd.hpp"
+#ifdef GLM_CXX_MODULES
+#	define GLM_CXX_MODULES_EXPORT export
+#else
+#	include <cmath>
+#	include <climits>
+#	include <cfloat>
+#	include <limits>
+#	include <cassert>
+#	include "fwd.hpp"
+#endif
 
 #include "vec2.hpp"
 #include "vec3.hpp"

@@ -20,7 +20,11 @@
 #	pragma message("GLM: GLM_EXT_vector_int4_sized extension included")
 #endif
 
-namespace glm
+#if !defined(GLM_CXX_MODULES) && !defined(GLM_CXX_MODULES_EXPORT)
+#define GLM_CXX_MODULES_EXPORT
+#endif
+
+GLM_CXX_MODULES_EXPORT namespace glm
 {
 	/// @addtogroup ext_vector_int4_sized
 	/// @{

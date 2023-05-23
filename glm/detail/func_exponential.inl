@@ -3,9 +3,14 @@
 
 #include "../vector_relational.hpp"
 #include "_vectorize.hpp"
+#ifndef GLM_CXX_MODULES
 #include <limits>
 #include <cmath>
 #include <cassert>
+#else
+#pragma warning(suppress : 5244)
+#include <assert.h>
+#endif
 
 namespace glm{
 namespace detail

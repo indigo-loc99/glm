@@ -9,9 +9,17 @@
 #elif GLM_CONFIG_SWIZZLE == GLM_SWIZZLE_FUNCTION
 #	include "_swizzle_func.hpp"
 #endif
+
+#ifndef GLM_CXX_MODULES
 #include <cstddef>
 
-namespace glm
+#	ifndef GLM_CXX_MODULES_EXPORT
+#		define GLM_CXX_MODULES_EXPORT
+#	endif
+
+#endif
+
+GLM_CXX_MODULES_EXPORT namespace glm
 {
 	template<typename T, qualifier Q>
 	struct vec<2, T, Q>

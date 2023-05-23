@@ -9,7 +9,11 @@
 #elif GLM_CONFIG_SWIZZLE == GLM_SWIZZLE_FUNCTION
 #	include "_swizzle_func.hpp"
 #endif
+#ifndef GLM_CXX_MODULES
 #include <cstddef>
+#else
+#include <stddef.h>
+#endif
 
 namespace glm
 {

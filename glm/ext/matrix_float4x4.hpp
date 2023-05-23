@@ -4,7 +4,11 @@
 #pragma once
 #include "../detail/type_mat4x4.hpp"
 
-namespace glm
+#if !defined(GLM_CXX_MODULES) && !defined(GLM_CXX_MODULES_EXPORT)
+#define GLM_CXX_MODULES_EXPORT
+#endif
+
+GLM_CXX_MODULES_EXPORT namespace glm
 {
 	/// @ingroup core_matrix
 	/// @{

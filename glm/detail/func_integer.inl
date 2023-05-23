@@ -2,10 +2,19 @@
 
 #include "_vectorize.hpp"
 #if(GLM_ARCH & GLM_ARCH_X86 && GLM_COMPILER & GLM_COMPILER_VC)
+#	ifdef GLM_CXX_MODULES
+#		pragma warning(push)
+#		pragma warning(disable : 5244)
+#	endif
 #	include <intrin.h>
+#	ifdef GLM_CXX_MODULES
+#		pragma warning(pop)
+#	endif
 #	pragma intrinsic(_BitScanReverse)
 #endif//(GLM_ARCH & GLM_ARCH_X86 && GLM_COMPILER & GLM_COMPILER_VC)
+#ifndef GLM_CXX_MODULES
 #include <limits>
+#endif
 
 #if !GLM_HAS_EXTENDED_INTEGER_TYPE
 #	if GLM_COMPILER & GLM_COMPILER_GCC

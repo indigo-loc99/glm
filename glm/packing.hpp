@@ -19,7 +19,11 @@
 #include "./ext/vector_float2.hpp"
 #include "./ext/vector_float4.hpp"
 
-namespace glm
+#if !defined(GLM_CXX_MODULES) && !defined(GLM_CXX_MODULES_EXPORT)
+#define GLM_CXX_MODULES_EXPORT
+#endif
+
+GLM_CXX_MODULES_EXPORT namespace glm
 {
 	/// @addtogroup core_func_packing
 	/// @{

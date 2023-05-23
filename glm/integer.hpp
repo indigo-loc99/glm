@@ -20,7 +20,11 @@
 #include "common.hpp"
 #include "vector_relational.hpp"
 
-namespace glm
+#if !defined(GLM_CXX_MODULES) && !defined(GLM_CXX_MODULES_EXPORT)
+#define GLM_CXX_MODULES_EXPORT
+#endif
+
+GLM_CXX_MODULES_EXPORT namespace glm
 {
 	/// @addtogroup core_func_integer
 	/// @{
