@@ -18,7 +18,7 @@
 #	pragma message("GLM: GLM_EXT_scalar_int_sized extension included")
 #endif
 
-#ifndef GLM_CXX_MODULES
+#if !defined(GLM_CXX_MODULES) && !defined(GLM_CXX_MODULES_EXPORT)
 #define GLM_CXX_MODULES_EXPORT
 #endif
 
@@ -53,7 +53,9 @@ namespace detail
 		enum test {value = ~0};
 	};
 }//namespace detail
+}//namespace glm
 
+GLM_CXX_MODULES_EXPORT namespace glm{
 
 	/// @addtogroup ext_scalar_int_sized
 	/// @{

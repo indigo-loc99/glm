@@ -2,7 +2,11 @@
 
 #include "detail/qualifier.hpp"
 
-namespace glm
+#if !defined(GLM_CXX_MODULES) && !defined(GLM_CXX_MODULES_EXPORT)
+#define GLM_CXX_MODULES_EXPORT
+#endif
+
+GLM_CXX_MODULES_EXPORT namespace glm
 {
 #if GLM_HAS_EXTENDED_INTEGER_TYPE
 	typedef std::int8_t				int8;

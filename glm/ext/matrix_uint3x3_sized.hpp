@@ -16,11 +16,15 @@
 #include "../mat3x3.hpp"
 #include "../ext/scalar_uint_sized.hpp"
 
+#if !defined(GLM_CXX_MODULES) && !defined(GLM_CXX_MODULES_EXPORT)
+#define GLM_CXX_MODULES_EXPORT
+#endif
+
 #if GLM_MESSAGES == GLM_ENABLE && !defined(GLM_EXT_INCLUDED)
 #	pragma message("GLM: GLM_EXT_matrix_uint3x3_sized extension included")
 #endif
 
-namespace glm
+GLM_CXX_MODULES_EXPORT namespace glm
 {
 	/// @addtogroup ext_matrix_uint3x3_sized
 	/// @{

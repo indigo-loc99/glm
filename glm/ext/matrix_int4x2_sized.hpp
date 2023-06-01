@@ -16,11 +16,15 @@
 #include "../mat4x2.hpp"
 #include "../ext/scalar_int_sized.hpp"
 
-#if GLM_MESSAGES == GLM_ENABLE && !defined(GLM_EXT_INCLUDED)
-#	pragma message("GLM: GLM_EXT_matrix_int4x2_sized extension included")
+#if !defined(GLM_CXX_MODULES) && !defined(GLM_CXX_MODULES_EXPORT)
+#define GLM_CXX_MODULES_EXPORT
 #endif
 
-namespace glm
+#if !defined(GLM_CXX_MODULES) && !defined(GLM_CXX_MODULES_EXPORT)
+#define GLM_CXX_MODULES_EXPORT
+#endif
+
+GLM_CXX_MODULES_EXPORT namespace glm
 {
 	/// @addtogroup ext_matrix_int4x2_sized
 	/// @{

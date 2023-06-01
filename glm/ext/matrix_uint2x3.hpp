@@ -15,11 +15,15 @@
 // Dependency:
 #include "../mat2x3.hpp"
 
+#if !defined(GLM_CXX_MODULES) && !defined(GLM_CXX_MODULES_EXPORT)
+#define GLM_CXX_MODULES_EXPORT
+#endif
+
 #if GLM_MESSAGES == GLM_ENABLE && !defined(GLM_EXT_INCLUDED)
 #	pragma message("GLM: GLM_EXT_matrix_uint2x3 extension included")
 #endif
 
-namespace glm
+GLM_CXX_MODULES_EXPORT namespace glm
 {
 	/// @addtogroup ext_matrix_uint2x3
 	/// @{

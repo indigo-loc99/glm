@@ -17,7 +17,11 @@
 #	pragma message("GLM: GLM_EXT_scalar_constants extension included")
 #endif
 
-namespace glm
+#if !defined(GLM_CXX_MODULES) && !defined(GLM_CXX_MODULES_EXPORT)
+#define GLM_CXX_MODULES_EXPORT
+#endif
+
+GLM_CXX_MODULES_EXPORT namespace glm
 {
 	/// @addtogroup ext_scalar_constants
 	/// @{

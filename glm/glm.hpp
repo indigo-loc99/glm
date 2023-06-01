@@ -120,8 +120,8 @@
 #	include <cfloat>
 #	include <limits>
 #	include <cassert>
-#	include "fwd.hpp"
 #endif
+#	include "fwd.hpp"
 
 #include "vec2.hpp"
 #include "vec3.hpp"

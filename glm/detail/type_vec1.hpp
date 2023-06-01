@@ -3,7 +3,9 @@
 
 #pragma once
 
-#include "qualifier.hpp"
+#ifndef GLM_CXX_MODULES
+#	include "qualifier.hpp"
+#endif
 #if GLM_CONFIG_SWIZZLE == GLM_SWIZZLE_OPERATOR
 #	include "_swizzle.hpp"
 #elif GLM_CONFIG_SWIZZLE == GLM_SWIZZLE_FUNCTION
