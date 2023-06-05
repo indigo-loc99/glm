@@ -25,6 +25,10 @@
 #define GLM_CXX_MODULES_EXPORT
 #endif
 
+#ifdef GLM_FOO_BAR
+extern int GLM_CXX_MODULES sir_var;
+#endif
+
 GLM_CXX_MODULES_EXPORT namespace glm
 {
 	/// @addtogroup core_func_trigonometric

@@ -23,7 +23,7 @@
 #	pragma message("GLM: GLM_EXT_quaternion_relational extension included")
 #endif
 
-namespace glm
+GLM_CXX_MODULES_EXPORT namespace glm
 {
 	/// @addtogroup ext_quaternion_relational
 	/// @{

@@ -1,9 +1,13 @@
 #pragma once
 
-#include "setup.hpp"
+#ifndef GLM_CXX_MODULES
+#	include "setup.hpp"
+#endif
 
 #if !defined(GLM_CXX_MODULES) && !defined(GLM_CXX_MODULES_EXPORT)
-#define GLM_CXX_MODULES_EXPORT
+#	define GLM_CXX_MODULES_EXPORT
+#elif !defined(GLM_CXX_MODULES_EXPORT)
+#	define GLM_CXX_MODULES_EXPORT export
 #endif
 
 namespace glm

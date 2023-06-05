@@ -26,13 +26,15 @@
 #include "../common.hpp"
 #include "../trigonometric.hpp"
 #include "../exponential.hpp"
-#include <limits>
+#ifndef GLM_CXX_MODULES
+#	include <limits>
+#endif // !GLM_CXX_MODULES
 
 #if GLM_MESSAGES == GLM_ENABLE && !defined(GLM_EXT_INCLUDED)
 #	pragma message("GLM: GLM_EXT_quaternion_common extension included")
 #endif
 
-namespace glm
+GLM_CXX_MODULES_EXPORT namespace glm
 {
 	/// @addtogroup ext_quaternion_common
 	/// @{

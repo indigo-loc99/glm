@@ -155,6 +155,7 @@ namespace detail
 	template<length_t L, typename T, qualifier Q, bool Aligned>
 	struct compute_sign<L, T, Q, false, Aligned>
 	{
+		static_assert(sizeof(vec<L, T, Q>) == 4);
 		GLM_FUNC_QUALIFIER static vec<L, T, Q> call(vec<L, T, Q> const& x)
 		{
 			T const Shift(static_cast<T>(sizeof(T) * 8 - 1));

@@ -13,7 +13,7 @@
 #include "../gtc/constants.hpp"
 #include "../gtc/matrix_transform.hpp"
 
-namespace glm
+GLM_CXX_MODULES_EXPORT namespace glm
 {
 	template<typename T, qualifier Q>
 	struct qua

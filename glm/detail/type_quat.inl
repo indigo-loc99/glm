@@ -2,7 +2,9 @@
 #include "../exponential.hpp"
 #include "../ext/quaternion_common.hpp"
 #include "../ext/quaternion_geometric.hpp"
-#include <limits>
+#ifndef GLM_CXX_MODULES
+#	include <limits>
+#endif
 
 namespace glm{
 namespace detail

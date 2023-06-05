@@ -3,9 +3,9 @@
 
 #pragma once
 
-#ifndef GLM_CXX_MODULES
+//#ifndef GLM_CXX_MODULES
 #	include "qualifier.hpp"
-#endif
+//#endif
 #if GLM_CONFIG_SWIZZLE == GLM_SWIZZLE_OPERATOR
 #	include "_swizzle.hpp"
 #elif GLM_CONFIG_SWIZZLE == GLM_SWIZZLE_FUNCTION
@@ -16,6 +16,8 @@
 #	ifndef GLM_CXX_MODULES_EXPORT
 #		define GLM_CXX_MODULES_EXPORT
 #	endif
+#elif !defined(GLM_CXX_MODULES_EXPORT)
+#	define GLM_CXX_MODULES_EXPORT export
 #endif
 
 GLM_CXX_MODULES_EXPORT namespace glm

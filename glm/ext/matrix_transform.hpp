@@ -29,7 +29,7 @@
 #	pragma message("GLM: GLM_EXT_matrix_transform extension included")
 #endif
 
-namespace glm
+GLM_CXX_MODULES_EXPORT namespace glm
 {
 	/// @addtogroup ext_matrix_transform
 	/// @{

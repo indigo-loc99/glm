@@ -19,7 +19,7 @@
 #	pragma message("GLM: GLM_GTC_constants extension included")
 #endif
 
-namespace glm
+GLM_CXX_MODULES_EXPORT namespace glm
 {
 	/// @addtogroup gtc_constants
 	/// @{

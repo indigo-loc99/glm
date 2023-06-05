@@ -1,8 +1,10 @@
 /// @ref gtc_type_ptr
 
-#include <cstring>
+#ifndef GLM_CXX_MODULES
+#	include <cstring>
+#endif
 
-namespace glm
+GLM_CXX_MODULES_EXPORT namespace glm
 {
 	/// @addtogroup gtc_type_ptr
 	/// @{

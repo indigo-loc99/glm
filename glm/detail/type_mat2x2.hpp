@@ -7,8 +7,8 @@
 #ifndef GLM_CXX_MODULES
 #	include <limits>
 #	include <cstddef>
-#	ifndef GLM_CXX_MODULES
-#		define GLM_CXX_MODULES
+#	ifndef GLM_CXX_MODULES_EXPORT
+#		define GLM_CXX_MODULES_EXPORT
 #	endif
 
 #else

@@ -1,14 +1,23 @@
 #ifndef GLM_SETUP_INCLUDED
 
+
+#if !defined(GLM_CXX_MODULES) && !defined(GLM_CXX_MODULES_EXPORT)
+#	define GLM_CXX_MODULES_EXPORT
+#elif defined(GLM_CXX_MODULES) && !defined(GLM_CXX_MODULES_EXPORT)
+#	define GLM_CXX_MODULES_EXPORT export
+#endif
+
+
 #ifndef GLM_CXX_MODULES
 #include <cassert>
 #include <cstddef>
 #else
-#pragma warning(push)
-#pragma warning(disable : 5244)
-#include <assert.h>
-#include <stddef.h>
-#pragma warning(pop)
+#	pragma warning(push)
+#	pragma warning(disable : 5244)
+#	include <assert.h>
+//#	include <cstddef>
+#	include <stddef.h>
+#	pragma warning(pop)
 #endif
 
 #define GLM_VERSION_MAJOR 0
@@ -633,6 +642,7 @@ namespace std {
 #	define GLM_CONFIG_LENGTH_TYPE		GLM_LENGTH_INT
 #endif
 
+#ifndef GLM_CXX_MODULES
 namespace glm
 {
 	using std::size_t;
@@ -642,6 +652,7 @@ namespace glm
 		typedef int length_t;
 #	endif
 }//namespace glm
+#endif // GLM_CXX_MODULES
 
 ///////////////////////////////////////////////////////////////////////////////////
 // constexpr
@@ -649,6 +660,7 @@ namespace glm
 #if GLM_HAS_CONSTEXPR
 #	define GLM_CONFIG_CONSTEXP GLM_ENABLE
 
+#	ifndef GLM_CXX_MODULES
 	namespace glm
 	{
 		template<typename T, std::size_t N>
@@ -658,6 +670,8 @@ namespace glm
 		}
 	}//namespace glm
 #	define GLM_COUNTOF(arr) glm::countof(arr)
+#	endif // GLM_CXX_MODULES
+
 #elif defined(_MSC_VER)
 #	define GLM_CONFIG_CONSTEXP GLM_DISABLE
 
@@ -706,6 +720,7 @@ namespace detail
 #pragma warning(push)
 #pragma warning(disable : 5244)
 #   include <stdint.h>
+//#	include <cstdint>
 #pragma warning(pop)
 #endif
 #endif
@@ -714,8 +729,10 @@ namespace glm{
 namespace detail
 {
 #	if GLM_HAS_EXTENDED_INTEGER_TYPE
+#		ifndef GLM_CXX_MODULES
 		typedef std::uint64_t						uint64;
 		typedef std::int64_t						int64;
+#		endif
 #	elif (defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 199901L)) // C99 detected, 64 bit types available
 		typedef uint64_t							uint64;
 		typedef int64_t								int64;
@@ -741,7 +758,7 @@ namespace detail
 // make_unsigned
 
 #if GLM_HAS_MAKE_SIGNED
-#if 0
+#ifndef GLM_CXX_MODULES
 #	include <type_traits>
 
 namespace glm{
